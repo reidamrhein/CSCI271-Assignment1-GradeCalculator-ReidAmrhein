@@ -31,16 +31,16 @@
 
 public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
     char letter;
-    if (G >= 90){
+    if (grade >= 90){
         letter = 'A';
     } 
-    else if (G >= 80) {
+    else if (grade >= 80) {
         letter = 'B';
     }
-    else if (G >= 70) {
+    else if (grade >= 70) {
         letter = 'C';
     }
-    else if (G >= 60) {
+    else if (grade >= 60) {
         letter = 'D';
     }
     else {
