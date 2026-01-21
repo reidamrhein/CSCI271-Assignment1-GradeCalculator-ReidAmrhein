@@ -30,20 +30,22 @@
 ********************************************************************/
 
 public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
-    char letter;
-    if (grade >= 90){
-        letter = 'A';
-    } 
-    else if (grade >= 80) {
-        letter = 'B';
-    }
-    else if (grade >= 70) {
-        letter = 'C';
-    }
-    else if (grade >= 60) {
-        letter = 'D';
-    }
-    else {
-        letter = 'F';
+    public static void main(String[] args){
+        char letter;
+        if (grade >= 90){
+            letter = 'A';
+        } 
+        else if (grade >= 80) {
+            letter = 'B';
+        }
+        else if (grade >= 70) {
+            letter = 'C';
+        }
+        else if (grade >= 60) {
+            letter = 'D';
+        }
+        else {
+            letter = 'F';
+        }
     }
 }
