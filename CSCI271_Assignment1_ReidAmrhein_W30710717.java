@@ -31,6 +31,9 @@
 
 public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
     public static void main(String[] args){
+        double assignmentSum = 0;
+        double testSum = 0;
+        double grade;
         char letter;
         if (grade >= 90){
             letter = 'A';
