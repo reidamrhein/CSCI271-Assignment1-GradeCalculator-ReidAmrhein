@@ -28,6 +28,7 @@
 * <Reid Amrhein>
 * <W30710717>
 ********************************************************************/
+import java.util.Scanner;
 
 public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
     public static void main(String[] args){
