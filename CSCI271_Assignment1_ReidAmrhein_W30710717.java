@@ -91,6 +91,10 @@ public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
             letter = 'F';
         }
 
+        // Prints the final numeric and letter grade
+        System.out.println("Final Numeric Grade: ", grade);
+        System.out.println("Final Letter Grade: ", letter);
+        
         // closes the scanner
         input.close();
     }
