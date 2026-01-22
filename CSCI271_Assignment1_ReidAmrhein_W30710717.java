@@ -74,27 +74,27 @@ public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
         }
 
         // These if statements assign a letter grade
-        char letter;
+        char letterGrade;
         if (grade >= 90.0){
-            letter = 'A';
+            letterGrade = 'A';
         } 
         else if (grade >= 80.0) {
-            letter = 'B';
+            letterGrade = 'B';
         }
         else if (grade >= 70.0) {
-            letter = 'C';
+            letterGrade = 'C';
         }
         else if (grade >= 60.0) {
-            letter = 'D';
+            letterGrade = 'D';
         }
         else {
-            letter = 'F';
+            letterGrade = 'F';
         }
 
         // Prints the final numeric and letter grade
         // Found out the hard way Java does NOT take 2 arguments in print statements
         System.out.println("Final Numeric Grade: " + grade);
-        System.out.println("Final Letter Grade: " + letter);
+        System.out.println("Final Letter Grade: " + letterGrade);
         
         // closes the scanner
         input.close();
