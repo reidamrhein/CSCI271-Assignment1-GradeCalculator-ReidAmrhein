@@ -33,6 +33,17 @@ public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
     public static void main(String[] args){
         double assignmentSum = 0;
         double testSum = 0;
+        
+        double assignment = assignmentSum / 7.0;
+        double test = testSum / 7.0;
+
+        double midterm = sc.nextDouble();
+        double finalExam = sc.nextdouble();
+        
+        // This is what I believe is the bugfix for the syllabus, as it
+        // now adds up to 70 instead of 100
+        double E = (0.4 * finalExam + 0.2 * midterm + 0.1 * test) / 0.7;
+
         double grade;
         char letter;
         if (grade >= 90){
