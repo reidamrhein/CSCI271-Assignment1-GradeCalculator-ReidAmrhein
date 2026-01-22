@@ -30,6 +30,8 @@
 ********************************************************************/
 import java.util.Scanner;
 
+// The program can be tested using input redirection with a numeric-only file
+// e.g., java CSCI271_Assignment1_ReidAmrhein_W30710717 < reidgrades.txt
 public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
@@ -49,17 +51,21 @@ public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
             testSum += input.nextDouble();
         }
         
-        double assignments = assignmentSum / 7.0;
-        double tests = testSum / 7.0;
+        double assignments = assignmentSum / 7.0; // Average assignment score
+        double tests = testSum / 7.0; // Average test score
 
+        // After the assignments and tests are read, it will stop reading
+        // so i used the "next" function to read both the midterm and final
         double midterm = input.nextDouble();
         double finalExam = input.nextDouble();
+        
         // This is what I believe is the bugfix for the syllabus, as it
         // now calculates to 100 instead of 70
         double E = (0.4 * finalExam + 0.2 * midterm + 0.1 * tests) / 0.7;
 
         double grade;
         double weight;
+        // weight = dynamic assignment weight when E is between 60 and 80
 
         // These if statements apply the weight if necessary, if not, it calculates normally
         if (E < 60.0) {
