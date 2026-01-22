@@ -32,29 +32,32 @@ import java.util.Scanner;
 
 public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
     public static void main(String[] args){
-        double assignmentSum = 0;
-        double testSum = 0;
+        Scanner input = new Scanner(system.in);
+        
+        System.out.println("Student Final Grades");
+        
+        double assignmentSum = 0.0;
+        double testSum = 0.0;
         
         double assignment = assignmentSum / 7.0;
         double test = testSum / 7.0;
 
-        double midterm = sc.nextDouble();
-        double finalExam = sc.nextdouble();
-        
+        double midterm = input.nextDouble();
+        double finalExam = input.nextDouble();
         // This is what I believe is the bugfix for the syllabus, as it
-        // now adds up to 70 instead of 100
+        // now calculates to 100 instead of 70
         double E = (0.4 * finalExam + 0.2 * midterm + 0.1 * test) / 0.7;
 
         double grade;
         double weight;
 
         // These if statements apply the weight if necessary, if not, it calculates normally
-        if (E < 60) {
+        if (E < 60.0) {
             grade = E;
         }
-        else if (E < 80) {
-            weight = ((E - 60) 20.0) * 0.3;
-            grade = (1 - weight) * E + weight * assignment;
+        else if (E < 80.0) {
+            weight = ((E - 60.0) 20.0) * 0.3;
+            grade = (1.0 - weight) * E + weight * assignment;
         }
         else {
             grade = 0.4 * finalExam + 0.2 * midterm + 0.1 * test + 0.3 * assignment;
@@ -62,20 +65,23 @@ public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
 
         // These if statements assign a letter grade
         char letter;
-        if (grade >= 90){
+        if (grade >= 90.0){
             letter = 'A';
         } 
-        else if (grade >= 80) {
+        else if (grade >= 80.0) {
             letter = 'B';
         }
-        else if (grade >= 70) {
+        else if (grade >= 70.0) {
             letter = 'C';
         }
-        else if (grade >= 60) {
+        else if (grade >= 60.0) {
             letter = 'D';
         }
         else {
             letter = 'F';
         }
+
+        // closes the scanner
+        input.close();
     }
 }
