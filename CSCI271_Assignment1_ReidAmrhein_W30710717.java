@@ -45,6 +45,21 @@ public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
         double E = (0.4 * finalExam + 0.2 * midterm + 0.1 * test) / 0.7;
 
         double grade;
+        double weight;
+
+        // These if statements apply the weight if necessary, if not, it calculates normally
+        if (E < 60) {
+            grade = E;
+        }
+        else if (E < 80) {
+            weight = ((E - 60) 20.0) * 0.3;
+            grade = (1 - weight) * E + weight * assignment;
+        }
+        else {
+            grade = 0.4 * finalExam + 0.2 * midterm + 0.1 * test + 0.3 * assignment;
+        }
+
+        // These if statements assign a letter grade
         char letter;
         if (grade >= 90){
             letter = 'A';
