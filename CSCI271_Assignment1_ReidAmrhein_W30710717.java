@@ -32,21 +32,31 @@ import java.util.Scanner;
 
 public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
     public static void main(String[] args){
-        Scanner input = new Scanner(system.in);
+        Scanner input = new Scanner(System.in);
         
         System.out.println("Student Final Grades");
         
         double assignmentSum = 0.0;
         double testSum = 0.0;
+
+        // Reads the 7 assignment scores
+        for (int i = 0; i < 7; i++) {
+            assignmentSum += input.nextDouble();
+        }
+
+        // Reads the 7 test scores
+        for (int i = 0; i < 7; i++) {
+            testSum += input.nextDouble();
+        }
         
-        double assignment = assignmentSum / 7.0;
-        double test = testSum / 7.0;
+        double assignments = assignmentSum / 7.0;
+        double tests = testSum / 7.0;
 
         double midterm = input.nextDouble();
         double finalExam = input.nextDouble();
         // This is what I believe is the bugfix for the syllabus, as it
         // now calculates to 100 instead of 70
-        double E = (0.4 * finalExam + 0.2 * midterm + 0.1 * test) / 0.7;
+        double E = (0.4 * finalExam + 0.2 * midterm + 0.1 * tests) / 0.7;
 
         double grade;
         double weight;
@@ -56,11 +66,11 @@ public class CSCI271_Assignment1_ReidAmrhein_W30710717 {
             grade = E;
         }
         else if (E < 80.0) {
-            weight = ((E - 60.0) 20.0) * 0.3;
-            grade = (1.0 - weight) * E + weight * assignment;
+            weight = ((E - 60.0) / 20.0) * 0.3;
+            grade = (1.0 - weight) * E + weight * assignments;
         }
         else {
-            grade = 0.4 * finalExam + 0.2 * midterm + 0.1 * test + 0.3 * assignment;
+            grade = 0.4 * finalExam + 0.2 * midterm + 0.1 * tests + 0.3 * assignments;
         }
 
         // These if statements assign a letter grade
